@@ -1,11 +1,9 @@
 <template name="MainLayout">
 
-    <header>
-      <h1>Recetas Meteor</h1>
-        {{> loginButtons}}
-    </header>
+      {{> Header}}
+      {{> SideNav}}
 
-    <main>
+    <main class="main-layout">
         {{> Template.dynamic template=main}}
     </main>
 
