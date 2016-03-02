@@ -2,7 +2,7 @@
     Hello from Recipe template
     <article class="recipe {{#if inMenu}}in-menu{{/if}}">
         <h3>{{name}}</h3>
-        {{#if $.Session.get 'editMode'}}
+        {{#if editMode}}
 
           {{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave="true"}}
 
@@ -19,7 +19,7 @@
             {{else}}
                 <button class="button btn-primary toggle-menu">Add To Menu</button>
             {{/if}}
-            
+
         {{/if}}
 
 
